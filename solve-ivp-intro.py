@@ -71,7 +71,7 @@ def dcdt(t, c):
 
 
 c0 = [1.0]  # always a list (or array), even with one variable
-t_span = (0, 10)  # start and end times
+t_span = (0, 10)  # start and end times, as a 'tuple'
 
 sol = solve_ivp(dcdt, t_span, c0)
 sol
@@ -187,7 +187,7 @@ plt.show()
 # $$\frac{dX}{dW} = \frac{-r_A'}{F_{A0}} \qquad
 #   \frac{dp}{dW} = -\frac{\alpha}{2p}(1+\epsilon X)$$
 #
-# (The textbook writes $dy$ instead of $dp$ in the second equation.)
+# (Depending on which edition, the textbook might write $dy$ instead of $dp$ in the second equation.)
 
 # %%
 def packed_bed(W, Y):
